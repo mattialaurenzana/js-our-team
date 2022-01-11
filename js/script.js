@@ -31,8 +31,8 @@ const team = [
     },
   ];
 
-  function createOutputHtml (object){
-    teamContainer.innerHTML += `  
+  function createOutputHtml (container,object){
+    container.innerHTML += `  
     <div class="team-card">
       <div class="card-image">
         <img
@@ -52,7 +52,7 @@ const teamContainer = document.querySelector('.team-container');
     const member = team[i];  //salvo in una variabile il membro attuale
     
   //richiamo la funzione per aggiungere l'oggetto all'html
-  createOutputHtml(member);
+  createOutputHtml(teamContainer,member);
   };
 
 
@@ -79,7 +79,7 @@ const teamContainer = document.querySelector('.team-container');
   
     team.push(newMember); //inserisco il nuovo oggetto creato all'interno dell'array contenente tutti i membri del team
 
-    createOutputHtml(newMember);
+    createOutputHtml(teamContainer,newMember);
     
 
     
