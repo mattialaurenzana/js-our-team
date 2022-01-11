@@ -34,21 +34,21 @@ const team = [
   function createOutputHtml (object){
     teamContainer.innerHTML += `  
     <div class="team-card">
-    <div class="card-image">
-      <img
-        src="img/${object.image}"
-        alt="${object.name}"
-      />
-    </div>
-    <div class="card-text">
-      <h3>${object.name}</h3>
-      <p>${object.role}</p>
-    </div>
+      <div class="card-image">
+        <img
+          src="img/${object.image}"
+          alt="${object.name}"
+        />
+      </div>
+      <div class="card-text">
+        <h3>${object.name}</h3>
+        <p>${object.role}</p>
+      </div>
   </div>` 
   }
   
 const teamContainer = document.querySelector('.team-container');
-  for(let i=1; i < team.length; i++){
+  for(let i=0; i < team.length; i++){
     const member = team[i];  //salvo in una variabile il membro attuale
     
   //richiamo la funzione per aggiungere l'oggetto all'html
